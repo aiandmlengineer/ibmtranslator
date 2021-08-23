@@ -30,9 +30,13 @@ def translation(text, model_id):
 
 def translate_en_to_fr(english_text):
     """Translate English text to French."""
-    return translation(english_text, MODEL_EN_FR).get["translations"][0].get["translation"]
+    print(translation(english_text, MODEL_EN_FR))
+    return translation(english_text, MODEL_EN_FR)["translations"][0]["translation"]
 
 
 def translate_fr_to_en(french_text):
     """Translate French text to English."""
-    return translation(french_text, MODEL_FR_EN).get["translations"][0].get["translation"]
+    print(french_text, MODEL_FR_EN)
+    return translation(french_text, MODEL_FR_EN)["translations"][0]["translation"]
+
+
